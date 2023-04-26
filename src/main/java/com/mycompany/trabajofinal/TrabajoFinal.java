@@ -11,6 +11,11 @@ package com.mycompany.trabajofinal;
 public class TrabajoFinal {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        
+        Conexion conexion1 = new Conexion();
+        
+        conexion1.estableceConexion();
+        
+        
     }
 }
