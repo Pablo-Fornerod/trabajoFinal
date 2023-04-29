@@ -65,4 +65,21 @@ public class Inscripcion {
     }
     
     
+    public boolean aprobada(Alumno alumno, Materia materia){
+        if(alumno.materiasAprobadas.contains(materia.nombre)){
+            System.out.println("La materia ya esta aprobada");
+            this.aprobada = false;
+        }else{
+            if (alumno.materiasAprobadas.retainAll(materia.correlativas)){
+                System.out.println("Se puede inscribir");
+                this.aprobada = true;
+            }else{
+                System.out.println("No se puede inscribir");
+                this.aprobada = false;
+            }
+        }
+        
+        return aprobada;
+    }
+    
 }

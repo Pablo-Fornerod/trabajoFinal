@@ -6,6 +6,7 @@ package com.mycompany.trabajofinal;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.Statement;
 import javax.swing.JOptionPane;
 
 /**
@@ -31,7 +32,7 @@ public class Conexion {
             Class.forName("com.mysql.cj.jdbc.Driver");
             conectar = DriverManager.getConnection(ruta, usuario, contraseña);
             JOptionPane.showMessageDialog(null, "Se conecto correctamente.");
-                    
+            
         }catch(Exception e){
             
             JOptionPane.showMessageDialog(null, "No se conecto correctamente." + e);
@@ -39,4 +40,17 @@ public class Conexion {
         }
         return conectar;
     }
+    
+    public Connection cerrarConexion(){
+        try{
+            conectar.close();
+            JOptionPane.showMessageDialog(null, "Se desconecto correctamente.");
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, "No se desconecto correctamente." + e);
+        }
+        return conectar;
+    }
+
 }
+
+  
