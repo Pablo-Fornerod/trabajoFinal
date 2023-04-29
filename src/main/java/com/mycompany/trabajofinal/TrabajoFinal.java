@@ -16,8 +16,9 @@ import java.util.Scanner;
 
 /**
  *
- * @author stere
+ * @author Pablito
  */
+//https://github.com/Pablo-Fornerod/trabajoFinal
 public class TrabajoFinal {
     public static void validarInscripcion() throws SQLException, IOException {
         System.out.println("Legajo:");
